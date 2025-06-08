@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janaina e Fernando - Convite de Casamento</title>
+  <style>
+    :root {
+      --azul-escuro: #2c3e50;
+      --azul-claro: #3498db;
+      --fundo: #f2f4f8;
+      --branco: #ffffff;
+      --cinza: #555;
+      --azul-pastel: #dce6f1;
+      --rosa-pastel: #f5e1e9;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--fundo);
+      color: var(--azul-escuro);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: var(--branco);
+      border-bottom: 2px solid var(--azul-claro);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--azul-escuro);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--azul-claro);
+    }
+
+    header, main, footer {
+      padding: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(to bottom, var(--branco), var(--azul-pastel));
+      border-bottom: 2px solid var(--azul-claro);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin: 0.5rem 0;
+    }
+
+    header p.citacao {
+      font-style: italic;
+      color: var(--cinza);
+    }
+
+    .pais {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+
+    .pais div {
+      flex: 1 1 45%;
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+
+    main {
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 2rem;
+      color: var(--azul-escuro);
+      margin-bottom: 0.2rem;
+    }
+
+    .info {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .enderecos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .endereco {
+      background-color: var(--branco);
+      border: 1px solid var(--azul-claro);
+      border-radius: 10px;
+      padding: 1rem;
+      width: 280px;
+    }
+
+    .endereco h3 {
+      color: var(--azul-claro);
+      margin-bottom: 0.5rem;
+    }
+
+    .rsvp {
+      background-color: var(--rosa-pastel);
+      border-radius: 10px;
+      padding: 1rem;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--cinza);
+    }
+
+    .flores {
+      position: absolute;
+      width: 160px;
+      opacity: 0.6;
+      z-index: 0;
+      animation: flutuar 8s ease-in-out infinite;
+    }
+
+    .flores.canto-esquerdo {
+      top: 0;
+      left: 0;
+    }
+
+    .flores.canto-direito {
+      bottom: 0;
+      right: 0;
+      transform: rotate(180deg);
+      animation-delay: 4s;
+    }
+
+    @keyframes flutuar {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-10px) scale(1.02); }
+    }
+
+    @media (max-width: 600px) {
+      .enderecos {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .pais {
+        flex-direction: column;
+      }
+
+      .flores {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#convite">Convite</a></li>
+      <li><a href="#cerimonia">Cerimônia</a></li>
+      <li><a href="#festa">Festa</a></li>
+      <li><a href="#presentes">Lista de Presentes</a></li>
+      <li><a href="#hospedagem">Hospedagem</a></li>
+      <li><a href="#como-chegar">Como Chegar</a></li>
+    </ul>
+  </nav>
+  <img src="../../imagens/flor_azul.png" class="flores canto-esquerdo" alt="flores decorativas esquerda">
+  <img src="../../imagens/arranjo_flores.png" class="flores canto-direito" alt="flores decorativas direita">
+  <header id="convite">
+    <p class="citacao">"Assim, eles já não são dois, mas sim uma só carne. Portanto, o que Deus uniu, ninguém separa"<br />(Mateus 19:6)</p>
+    <div class="pais">
+      <div>
+        Antônio Caetano de Almeida<br />
+        Alaide Souza Caetano
+      </div>
+      <div>
+        Emilio César Fernandes<br />
+        Maria Hedoneia Sampaio Bonafé
+      </div>
+    </div>
+  </header>
+  <main>
+    <h2>Janaina e Fernando</h2>
+    <p>convidam para a cerimônia de seu casamento</p>
+    <p class="info">
+      Sábado, 23 de agosto de 2025<br />
+      às 09h30 da manhã
+    </p>
+    <section id="cerimonia" class="enderecos">
+      <div class="endereco">
+        <h3>Cerimônia:</h3>
+        CAPELA MÃE RAINHA<br />
+        Rua Euzébio Pereira Lima, 125<br />
+        Ibirarema/SP
+      </div>
+      <div class="endereco" id="festa">
+        <h3>Recepção:</h3>
+        CHÁCARA DO SARGENTO<br />
+        Rodovia Francisco Antunes Ribeiro, s/n, Km 7,5<br />
+        Ibirarema/SP
+      </div>
+    </section>
+    <section class="rsvp">
+      Favor confirmar a presença com os nomes dos convidados até o dia 01/07/2025<br />
+      pelo telefone: <strong>19 98258-5035</strong>
+    </section>
+    <section id="presentes"></section>
+    <section id="hospedagem"></section>
+    <section id="como-chegar"></section>
+  </main>
+  <footer>
+    &copy; 2025 Janaina e Fernando. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
