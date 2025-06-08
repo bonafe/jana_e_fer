@@ -6,6 +6,14 @@
   <title>Janaina e Fernando - Convite de Casamento</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="./corpo-convite/corpo-convite.js" type="module"></script>
+  <script src="./flores-de-fundo/flores-de-fundo.js" type="module"></script>
+  <script src="./menu-navegacao/menu-navegacao.js" type="module"></script>
+  <script src="./pais-noivos/pais-noivos.js" type="module"></script>
+  <script src="./rodape-site/rodape-site.js" type="module"></script>
+  <script src="./sessao-enderecos/sessao-enderecos.js" type="module"></script>
+  <script src="./sessao-rsvp/sessao-rsvp.js" type="module"></script>
+  
   <style>
     :root {
       --azul-escuro: #2c3e50;
@@ -130,61 +138,14 @@
   </style>
 </head>
 <body>
-  <img src="../../imagens/flor_azul.png" class="flores canto-esquerdo" alt="flores decorativas esquerda">
-  <img src="../../imagens/arranjo_flores.png" class="flores canto-direito" alt="flores decorativas direita">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container justify-content-center">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#convite">Convite</a></li>
-        <li class="nav-item"><a class="nav-link" href="#cerimonia">Cerimônia</a></li>
-        <li class="nav-item"><a class="nav-link" href="#festa">Festa</a></li>
-        <li class="nav-item"><a class="nav-link" href="#presentes">Lista de Presentes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#hospedagem">Hospedagem</a></li>
-        <li class="nav-item"><a class="nav-link" href="#como-chegar">Como Chegar</a></li>
-      </ul>
-    </div>
-  </nav>
+  <flores-de-fundo></flores-de-fundo>
+  <menu-navegacao></menu-navegacao>
   <header id="convite">
-    <p class="citacao">"Assim, eles já não são dois, mas sim uma só carne. Portanto, o que Deus uniu, ninguém separa"<br />(Mateus 19:6)</p>
-    <div class="pais">
-      <div>
-        Antônio Caetano de Almeida<br />
-        Alaide Souza Caetano
-      </div>
-      <div>
-        Emilio César Fernandes<br />
-        Maria Hedoneia Sampaio Bonafé
-      </div>
-    </div>
+    <citacao-biblia></citacao-biblia>    
   </header>
   <main>
-    <h2>Janaina e Fernando</h2>
-    <p>convidam para a cerimônia de seu casamento</p>
-    <p class="info">
-      Sábado, 23 de agosto de 2025<br />
-      às 09h30 da manhã
-    </p>
-    <section id="cerimonia" class="enderecos">
-      <div class="endereco">
-        <h3>Cerimônia:</h3>
-        CAPELA MÃE RAINHA<br />
-        Rua Euzébio Pereira Lima, 125<br />
-        Ibirarema/SP
-      </div>
-      <div class="endereco" id="festa">
-        <h3>Recepção:</h3>
-        CHÁCARA DO SARGENTO<br />
-        Rodovia Francisco Antunes Ribeiro, s/n, Km 7,5<br />
-        Ibirarema/SP
-      </div>
-    </section>
-    <section class="rsvp">
-      Favor confirmar a presença com os nomes dos convidados até o dia 01/07/2025<br />
-      pelo telefone: <strong>19 98258-5035</strong>
-    </section>
-    <section id="presentes"></section>
-    <section id="hospedagem"></section>
-    <section id="como-chegar"></section>
+    <pais-noivos></pais-noivos>    
+    <corpo-convite></corpo-convite>
   </main>
   <footer>
     &copy; 2025 Janaina e Fernando. Todos os direitos reservados.
