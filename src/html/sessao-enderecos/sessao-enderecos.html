@@ -1,1 +1,41 @@
-<!-- HTML para sessao-enderecos -->
+<style>
+    .enderecos {
+      margin: 2rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+  
+    .endereco {
+      background-color: rgba(255, 255, 255, 0.5); /* branco com 70% opacidade */
+      border: 1px solid var(--azul-claro);
+      border-radius: 10px;
+      padding: 1rem;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+  
+    .endereco h3 {
+      color: var(--azul-claro);
+      margin-bottom: 0.5rem;
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+  
+  <section class="enderecos">
+    <div class="endereco">
+      <h3>Cerimônia:</h3>
+      CAPELA MÃE RAINHA<br />
+      Rua Euzébio Pereira Lima, 125<br />
+      Ibirarema/SP
+    </div>
+    <div class="endereco" id="festa">
+      <h3>Recepção:</h3>
+      CHÁCARA DO SARGENTO<br />
+      Rodovia Francisco Antunes Ribeiro, s/n, Km 7,5<br />
+      Ibirarema/SP
+    </div>
+  </section>
+  

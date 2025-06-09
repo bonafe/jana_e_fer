@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Janaina e Fernando - Convite de Casamento</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <script src="./corpo-convite/corpo-convite.js" type="module"></script>
-  <script src="./flores-de-fundo/flores-de-fundo.js" type="module"></script>
-  <script src="./menu-navegacao/menu-navegacao.js" type="module"></script>
-  <script src="./pais-noivos/pais-noivos.js" type="module"></script>
-  <script src="./rodape-site/rodape-site.js" type="module"></script>
-  <script src="./sessao-enderecos/sessao-enderecos.js" type="module"></script>
-  <script src="./sessao-rsvp/sessao-rsvp.js" type="module"></script>
-  
+
+  <script type="module" src="./citacao-biblia/citacao-biblia.js"></script>
+  <script type="module" src="./corpo-convite/corpo-convite.js"></script>
+  <script type="module" src="./flores-de-fundo/flores-de-fundo.js"></script>
+  <script type="module" src="./menu-navegacao/menu-navegacao.js"></script>  
+  <script type="module" src="./rodape-site/rodape-site.js"></script>
+
   <style>
     :root {
       --azul-escuro: #2c3e50;
@@ -23,110 +23,36 @@
       --cinza: #555;
       --azul-pastel: #dce6f1;
       --rosa-pastel: #f5e1e9;
+      --rosa-pastel-rgb: 245, 225, 233;
     }
 
     body {
       font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: var(--fundo);
+      background: linear-gradient(to right,
+        var(--azul-pastel) 0%,
+        var(--azul-pastel) calc(50% - 700px),
+        var(--fundo) calc(50% - 700px),
+        var(--fundo) calc(50% + 700px),
+        var(--azul-pastel) calc(50% + 700px),
+        var(--azul-pastel) 100%);
       color: var(--azul-escuro);
       position: relative;
       overflow-x: hidden;
     }
 
-    h2, h3, h1 {
-      font-family: 'Playfair Display', serif;
-    }
-
-    .flores {
-      position: fixed;
-      width: 200px;
-      opacity: 0.15;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .flores.canto-esquerdo {
-      top: 0;
-      left: 0;
-    }
-
-    .flores.canto-direito {
-      bottom: 0;
-      right: 0;
-    }
-
-    nav {
-      background-color: var(--branco);
-      border-bottom: 2px solid var(--azul-claro);
-      z-index: 1;
-    }
-
-    nav a.nav-link {
-      color: var(--azul-escuro);
-      font-weight: 600;
-    }
-
-    nav a.nav-link:hover {
-      color: var(--azul-claro);
-    }
-
-    header, main, footer {
+    header {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(220, 230, 241, 0.1));
+      padding: 2rem 1rem;
       position: relative;
       z-index: 1;
     }
 
-    header {
-      text-align: center;
-      background: linear-gradient(to bottom, var(--branco), var(--azul-pastel));
-      padding: 2rem 1rem;
-    }
-
-    header p.citacao {
-      font-style: italic;
-      color: var(--cinza);
-    }
-
-    .pais {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      margin-top: 1rem;
-    }
-
     main {
-      text-align: center;
       padding: 2rem 1rem;
-    }
-
-    .info {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-    }
-
-    .enderecos {
-      margin: 2rem auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .endereco {
-      background-color: var(--branco);
-      border: 1px solid var(--azul-claro);
-      border-radius: 10px;
-      padding: 1rem;
-      width: 280px;
-    }
-
-    .rsvp {
-      background-color: var(--rosa-pastel);
-      border-radius: 10px;
-      padding: 1rem;
-      margin-top: 2rem;
-      font-size: 1rem;
+      position: relative;
+      z-index: 1;
     }
 
     footer {
@@ -134,22 +60,28 @@
       font-size: 0.9rem;
       color: var(--cinza);
       padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.6);
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
   <flores-de-fundo></flores-de-fundo>
   <menu-navegacao></menu-navegacao>
-  <header id="convite">
+
+  <header>
     <citacao-biblia></citacao-biblia>    
   </header>
+
   <main>
-    <pais-noivos></pais-noivos>    
-    <corpo-convite></corpo-convite>
+    <corpo-convite></corpo-convite>    
   </main>
+
   <footer>
-    &copy; 2025 Janaina e Fernando. Todos os direitos reservados.
+    <rodape-site></rodape-site>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
